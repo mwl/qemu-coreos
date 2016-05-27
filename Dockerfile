@@ -7,3 +7,5 @@ ADD https://stable.release.core-os.net/amd64-usr/current/coreos_production_qemu_
 
 WORKDIR /coreos
 RUN bzip2 -d *.bz2 && rm -rf *.bz2 && chmod 755 /coreos/*.sh
+
+CMD /coreos/coreos_production_qemu.sh -nographic
